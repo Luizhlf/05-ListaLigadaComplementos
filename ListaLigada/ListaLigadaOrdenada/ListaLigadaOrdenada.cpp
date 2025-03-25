@@ -114,7 +114,7 @@ void exibirElementos()
 
 void inserirElemento()
 {
-	// aloca memória dinamicamente para o novo elemento
+	
 	NO* novo = (NO*)malloc(sizeof(NO));
 	if (novo == NULL)
 	{
@@ -127,7 +127,7 @@ void inserirElemento()
 
 	if (primeiro == NULL)
 	{
-		// Se a lista estiver vazia, o novo nó será o primeiro
+		
 		primeiro = novo;
 	}
 	else
@@ -169,7 +169,7 @@ void excluirElemento()
 	cout << "Insira um numero para excluir: ";
 	cin >> numero;
 
-	// Se a lista estiver vazia
+	
 	if (primeiro == NULL) {
 		cout << "A lista está vazia!" << endl;
 		return;
@@ -184,7 +184,7 @@ void excluirElemento()
 		aux = aux->prox;         // Avança para o próximo nó
 	}
 
-	// Se o elemento não for encontrado
+
 	if (aux == NULL) {
 		cout << "Elemento não encontrado." << endl;
 		return;
@@ -199,7 +199,7 @@ void excluirElemento()
 		anterior->prox = aux->prox;
 	}
 
-	// Libera a memória do nó excluído
+	
 	free(aux);
 
 	cout << "Elemento excluido com sucesso." << endl;
